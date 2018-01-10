@@ -7,27 +7,34 @@ import java.util.Date;
  * Created by PROBOOK on 06-Dec-17.
  */
 
-public class Earthquakes {
+public class Earthquakes extends ArrayList<Earthquakes> {
 
-    private String mPlaces;
-    private String mMagnitude;
-    private String mDate;
+    private String mLocation;
+    private  double mMagnitude;
+    private long mTimeInMilliseconds;
+    private String mUrl;
 
-    public Earthquakes ( String magnitude,String place, String date){
-        mPlaces = place;
+    public Earthquakes (  double magnitude,String location, long timeInMilliseconds, String url){
+        mLocation = location;
         mMagnitude = magnitude;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
-    public String getmDate() {
-        return mDate;
+    public long getmTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
-    public String getmMagnitude() {
+    public double getmMagnitude() {
         return mMagnitude;
     }
 
-    public String getmPlaces() {
-        return mPlaces;
+    public String getmLocation() {
+        return mLocation;
     }
+    public String getmUrl() {
+        return mUrl;
+    }
+
+
 }
